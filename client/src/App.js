@@ -29,7 +29,7 @@ function App() {
 
     getWeather(lat, lon);
 
-    // setLocation("");
+    setLocation("");
   };
 
   return (
@@ -61,25 +61,35 @@ function App() {
           </div>
           <div className="flex justify-between mt-10 px-10">
             <span className="text-4xl">Temperature</span>
-            <span className="text-4xl font-semibold">{data.main.temp} °F</span>
+            {data.main ? (
+              <span className="text-4xl font-semibold">
+                {data.main.temp} °F
+              </span>
+            ) : null}
           </div>
           <div className="flex justify-between mt-10 px-10">
             <span className="text-4xl">Feels Like</span>
-            <span className="text-4xl font-semibold">
-              {data.main.feels_like} °F
-            </span>
+            {data.main ? (
+              <span className="text-4xl font-semibold">
+                {data.main.feels_like} °F
+              </span>
+            ) : null}
           </div>
           <div className="flex justify-between mt-10 px-10">
             <span className="text-4xl">Wind Speed</span>
-            <span className="text-4xl font-semibold">
-              {data.wind.speed} km/h
-            </span>
+            {data.wind ? (
+              <span className="text-4xl font-semibold">
+                {data.wind.speed} km/h
+              </span>
+            ) : null}
           </div>
           <div className="flex justify-between mt-10 px-10">
             <span className="text-4xl">Sky</span>
-            <span className="text-4xl font-semibold">
-              {data.weather[0].description}
-            </span>
+            {data.weather ? (
+              <span className="text-4xl font-semibold">
+                {data.weather[0].description}
+              </span>
+            ) : null}
           </div>
         </div>
       </div>
