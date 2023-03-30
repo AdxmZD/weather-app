@@ -35,13 +35,14 @@ function App() {
   return (
     <div className="app">
       <div className="h-full w-full">
+        <div className=" absolute left-[480px] z-[-1] rounded-3xl w-1/2 h-full bg-black opacity-[.5]"></div>
         <div className="flex flex-col w-1/2 h-full mx-auto justify-start">
           <h1 className="flex justify-center text-6xl font-playfair font-semibold mt-10">
             weather <p className=" text-blue-400">App</p>
           </h1>
           <form
             onSubmit={handleSubmit}
-            className="flex justify-around w-full h-[50px] mt-10 "
+            className="flex justify-center w-full h-[50px] mt-10 "
           >
             <input
               className="rounded-2xl text-xl border border-white bg-transparent p-3 w-1/2"
