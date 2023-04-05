@@ -14,7 +14,7 @@ body,
 }
 .app:before {
   content: "";
-  background: url("./assets/weather-app-bg.jpg") no-repeat center center/cover;
+  background: url("./assets/cloudbg.jpg") no-repeat center center/cover;
   z-index: -1;
   position: absolute;
   height: 100%;
